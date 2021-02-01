@@ -25,5 +25,14 @@ throw new UrgentException("很好", "57657");
 错误信息： 参数传入错误
 堆栈信息： xxxx
 ```
+## 优化
+```
+app/Listener/QueueHandleListener.php 目录下 process 方法
+case $event instanceof FailedHandle:下面注释掉
+// $this->logger->error(sprintf('[%s] Failed %s.', $date, $jobClass));
+// $this->logger->error($this->formatter->format($event->getThrowable()));
 
-
+添加以下代码
+$log = new LogHelper();
+$log->error("异常捕获", $event->getThrowable());
+```
