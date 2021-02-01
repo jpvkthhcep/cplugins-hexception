@@ -4,13 +4,13 @@ Hyperf异常警报
 ## 安装
 项目根目录执行:
 ```
-composer require cplugins/hexception
+composer require cplugins/hexception v1.0.1
 ```
 
 ## 配置
 vendor/cplugins/hexception/src/ExceptionAlert.php 文件 48行
 
-配置异常推送的url
+配置异常推送的url, 多G.O上线后从env调用该链接
 
 ## 使用 
 ```
