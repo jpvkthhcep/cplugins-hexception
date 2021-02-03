@@ -4,7 +4,7 @@ Hyperf异常警报
 ## 安装
 项目根目录执行:
 ```
-composer require cplugins/hexception v1.0.1
+composer require cplugins/hexception
 ```
 
 ## 配置
